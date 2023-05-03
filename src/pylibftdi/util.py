@@ -24,16 +24,16 @@ class Bus:
     in the 'device' attribute of the object to which this is attached.
     """
 
-    def __init__(self, offset, width=1):
+    def __init__(self, offset: int, width: int=1) -> None:
         self.offset = offset
         self.width = width
         self._mask = (1 << width) - 1
 
-    def __get__(self, obj, type_):
-        val = obj.device.port
+    def __get__(self, obj, type_: None) -> int:
+        val: int = obj.device.port
         return (val >> self.offset) & self._mask
 
-    def __set__(self, obj, value):
+    def __set__(self, obj, value: int) -> None:
         value = value & self._mask
         # in a multi-threaded environment, would
         # want to ensure following was locked, eg

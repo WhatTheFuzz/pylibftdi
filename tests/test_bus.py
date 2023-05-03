@@ -54,6 +54,14 @@ class TestBus(unittest.TestCase):
         assert test_bus.b == 0
         assert test_bus.c == 21
 
+    def test_bus_get_type(self):
+        """
+        Test that __get__ returns the correct type
+        """
+        test_bus = TestBus.Bus1()
+        assert isinstance(test_bus.a, int)
+        assert isinstance(test_bus.b, int)
+        assert isinstance(test_bus.c, int)
 
 if __name__ == "__main__":
     unittest.main()
