@@ -15,6 +15,7 @@ example usage::
 Copyright (c) 2015-2020 Ben Bass <benbass@codedstructure.net>
 """  # noqa: E501
 
+from __future__ import annotations
 
 import platform
 from collections import OrderedDict

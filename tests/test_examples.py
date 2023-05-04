@@ -9,6 +9,8 @@ pylibftdi: https://github.com/codedstructure/pylibftdi
 This module contains some basic tests for the included examples.
 """
 
+from __future__ import annotations
+
 import unittest
 from collections import OrderedDict
 from typing import Any
