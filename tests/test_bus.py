@@ -63,5 +63,6 @@ class TestBus(unittest.TestCase):
         assert isinstance(test_bus.b, int)
         assert isinstance(test_bus.c, int)
 
+
 if __name__ == "__main__":
     unittest.main()

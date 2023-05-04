@@ -24,7 +24,7 @@ class Bus:
     in the 'device' attribute of the object to which this is attached.
     """
 
-    def __init__(self, offset: int, width: int=1) -> None:
+    def __init__(self, offset: int, width: int = 1) -> None:
         self.offset = offset
         self.width = width
         self._mask = (1 << width) - 1

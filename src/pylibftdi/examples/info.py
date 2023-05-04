@@ -18,17 +18,18 @@ Copyright (c) 2015-2020 Ben Bass <benbass@codedstructure.net>
 
 import platform
 from collections import OrderedDict
+from typing import Any
 
 import pylibftdi
 
 
-def ftdi_info():
+def ftdi_info() -> OrderedDict[str, Any]:
     """
     Return (ordered) dictionary contianing pylibftdi environment info
 
     Designed for display purposes only; keys and value types may vary.
     """
-    info = OrderedDict()
+    info: OrderedDict[str, Any] = OrderedDict()
     d = pylibftdi.Driver()
     info["pylibftdi version"] = pylibftdi.__VERSION__
     try:
